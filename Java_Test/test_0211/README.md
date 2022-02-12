@@ -12,3 +12,8 @@
 
 之后在浏览器就可以直接修改后缀，实现访问不同的项目了
 
+2. 添加多个tomcat 只要多的模块就可以添加多个tomcat服务器
+
+   ![demo01](pictures/demo01.png)
+
+![demo02](pictures/demo02.png)

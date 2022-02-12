@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/test_01.iml" filepath="$PROJECT_DIR$/test_01.iml" />
       <module fileurl="file://$PROJECT_DIR$/yang_01/yang_01.iml" filepath="$PROJECT_DIR$/yang_01/yang_01.iml" />
       <module fileurl="file://$PROJECT_DIR$/yang_02/yang_02.iml" filepath="$PROJECT_DIR$/yang_02/yang_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yang_03/yang_03.iml" filepath="$PROJECT_DIR$/yang_03/yang_03.iml" />
     </modules>
   </component>
 </project>

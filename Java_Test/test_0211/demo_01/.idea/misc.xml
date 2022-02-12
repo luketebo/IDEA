@@ -3,12 +3,14 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/yang_01" />
     <file type="web" url="file://$PROJECT_DIR$/yang_02" />
+    <file type="web" url="file://$PROJECT_DIR$/yang_03" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/yang_01/pom.xml" />
         <option value="$PROJECT_DIR$/yang_02/pom.xml" />
+        <option value="$PROJECT_DIR$/yang_03/pom.xml" />
       </list>
     </option>
   </component>
