@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function (){
+            const img = document.getElementById("checkCode");
+            img.onclick = function(){
+                const date = new Date().getTime();
+                img.src = "/CheckCodeDemo01?"+date;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <img id = "checkCode" src="/CheckCodeDemo01" alt="验证码">
+    <a id = "change" href="/hello.html">看不清换一张？</a>
+</body>
+</html>
