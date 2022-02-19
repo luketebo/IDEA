@@ -13,6 +13,12 @@ public class Win extends JFrame {
     // 组件
     private final List list = new List();
     private final JTextArea jTextarea = new JTextArea(content,10,88);
+
+    // 图标
+    private final Icon edit = new ImageIcon("icon/edit.svg");
+    private final Icon note_icon = new ImageIcon("icon/copy.png");
+    private final Icon day = new ImageIcon("icon/schedule.svg");
+
     // 面板
     private final JPanel totalPanel = new JPanel();
     // 暂不使用
@@ -29,14 +35,14 @@ public class Win extends JFrame {
     private final JPanel rightOperateBar_center_left = new JPanel();
 
     // 按钮
-    private final Button writeFree = new Button("随手记"); // 随手记
-    private final Button note = new Button("笔记"); // 笔记
-    private final Button dayLine = new Button("日程"); // 日程
-    private final Button demo_01 = new Button("案例"); // 日程
-    private final Button demo_02 = new Button("案例"); // 日程
-    private final Button demo_03 = new Button("案例"); // 日程
-    private final Button demo_04 = new Button("案例"); // 日程
-    private final Button demo_05 = new Button("案例"); // 日程
+    private final Button writeFree = new Button("随手记",edit); // 随手记
+    private final Button note = new Button("笔记",note_icon); // 笔记
+    private final Button dayLine = new Button("日程",day); // 日程
+    private final Button demo_01 = new Button("梦厅"); // 日程
+    private final Button demo_02 = new Button("课表"); // 日程
+    private final Button demo_03 = new Button("宇树"); // 日程
+    private final Button demo_04 = new Button("日记"); // 日程
+    private final Button demo_05 = new Button("问题"); // 日程
     private final Button demo_06 = new Button("案例"); // 日程
     private final Button demo_07 = new Button("案例"); // 日程
 
@@ -50,7 +56,7 @@ public class Win extends JFrame {
 
         setTitle("MeTools");
 
-//        totalPanel.setPreferredSize(new Dimension(1540,870));
+
 
         changeBar.setPreferredSize(new Dimension(1520,70));
 
@@ -76,14 +82,14 @@ public class Win extends JFrame {
         centerBar.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         centerBar.setLayout(new BorderLayout());
 
-//        leftOperateBar.setPreferredSize(new Dimension(230,860));
+
 
         leftOperateBar_jsp.setPreferredSize(new Dimension(200,750));
         leftOperateBar.add(leftOperateBar_jsp);
 
 
 
-//        rightOperateBar.setPreferredSize(new Dimension(1200,860));
+
 
         rightOperateBar_top.setPreferredSize(new Dimension(1300,70));
         rightOperateBar_top.setBorder(BorderFactory.createLineBorder(Color.BLACK));
@@ -96,7 +102,7 @@ public class Win extends JFrame {
         jTextarea.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         jTextarea.setFont(new Font("Console",Font.BOLD,24));
 
-//        rightOperateBat_center_center.add(jTextarea);
+
         rightOperateBat_center_center.setPreferredSize(new Dimension(1220,670));
 
         rightOperateBar_center_left.setPreferredSize(new Dimension(50,670));
