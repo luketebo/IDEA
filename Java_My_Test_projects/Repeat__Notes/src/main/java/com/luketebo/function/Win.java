@@ -4,6 +4,7 @@ import com.luketebo.utils.Button;
 
 import javax.swing.*;
 import java.awt.*;
+import java.net.URL;
 
 public class Win extends JFrame {
     private final String content = "随手记可以用来快速记录一些：\n" +
@@ -14,10 +15,14 @@ public class Win extends JFrame {
     private final List list = new List();
     private final JTextArea jTextarea = new JTextArea(content,10,88);
 
+    // 地址
+    URL url_edit = getClass().getResource("/icon/edit.png");
+    URL url_note_icon = getClass().getResource("/icon/copy.png");
+    URL url_day = getClass().getResource("/icon/selectall@2x_dark.png");
     // 图标
-    private final Icon edit = new ImageIcon("icon/edit.svg");
-    private final Icon note_icon = new ImageIcon("icon/copy.png");
-    private final Icon day = new ImageIcon("icon/schedule.svg");
+    private final Icon edit = new ImageIcon(url_edit);
+    private final Icon note_icon = new ImageIcon(url_note_icon);
+    private final Icon day = new ImageIcon(url_day);
 
     // 面板
     private final JPanel totalPanel = new JPanel();

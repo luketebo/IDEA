@@ -21,6 +21,7 @@ public class Button extends JButton {
         this.setFocusPainted(false);
         this.setMargin(new Insets(0,0,0,0));
         this.setFont(new Font("Console",Font.BOLD,24));
+        this.setIcon(demo);
     }
     // 实现icon方法
     Icon demo = new Icon() {
