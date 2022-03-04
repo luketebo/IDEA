@@ -10,26 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07fcf293-da2a-4c8d-9b34-6da1525c30c9" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../../test_0228/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../test_0228/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../test_0228/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../test_0228/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../test_0228/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../test_0228/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../test_0228/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../test_0228/demo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../test_0228/demo/src/main/java/com/example/demo/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../test_0228/demo/src/main/webapp/404.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../test_0228/demo/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../test_0228/demo/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../test_0228/src/main/java/com/luketebo/demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/500.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/jsp-api.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib/servlet-api.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/test/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/500.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/example/test/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/jsp-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/lib/servlet-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Java_Study_For_School_projects/JAVA" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Java_Study_For_School_projects/JAVA" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +121,8 @@
       <updated>1646058275759</updated>
       <workItem from="1646058276961" duration="680000" />
       <workItem from="1646058982302" duration="143000" />
-      <workItem from="1646059147716" duration="1148000" />
+      <workItem from="1646059147716" duration="1280000" />
+      <workItem from="1646109020914" duration="14000" />
     </task>
     <servers />
   </component>

@@ -18,15 +18,15 @@ public class demo {
 
         //URL指向要访问的数据库名mydata
 
-        String url = "jdbc:mysql://localhost:3306/demo";
+        String url = "jdbc:mysql://mackenia.xyz:3306/";
 
         //MySQL配置时的用户名
 
-        String user = "root";
+        String user = "sql";
 
         //MySQL配置时的密码
 
-        String password = "root";
+        String password = "mysql";
 
         //遍历查询结果集
 
@@ -50,7 +50,7 @@ public class demo {
 
             //要执行的SQL语句
 
-            String sql = "select * from demo";
+            String sql = "SHOW DATABASES";
 
             //3.ResultSet类，用来存放获取的结果集！！
 
@@ -62,7 +62,7 @@ public class demo {
 
             System.out.println("-----------------");
 
-            System.out.println("姓名" + "\t" + "职称");
+          //  System.out.println("姓名" + "\t" + "职称");
 
             System.out.println("-----------------");
 
@@ -72,21 +72,24 @@ public class demo {
 
             String id = null;
 
+            String data = null;
+
             while(rs.next()){
 
                 //获取stuname这列数据
 
-                job = rs.getString("sno");
+               // job = rs.getString("sno");
 
                 //获取stuid这列数据
 
-                id = rs.getString("sname");
+               // id = rs.getString("sname");
 
-
+                data = rs.toString();
+                System.out.println(data);
 
                 //输出结果
 
-                System.out.println(id + "\t" + job);
+            //    System.out.println(id + "\t" + job);
 
             }
 

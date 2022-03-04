@@ -5,19 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be48e6f6-86e2-413f-9fa7-c0bcb71330dc" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/webapp/404.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/luketebo/demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/webapp/404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/luketebo/demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luketebo/demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/luketebo/demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/luketebo/demo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test_0228_demo/test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/classes/com/example/test/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/500.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/example/test/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/WEB-INF/lib/jsp-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/WEB-INF/lib/servlet-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Java_Study_For_School_projects/JAVA" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Study_For_School_projects/JAVA" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,8 +62,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Tomcat 服务器.Tomcat 8.5.75">
+  <component name="RunManager" selected="应用程序.demo">
     <configuration name="demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.luketebo.demo" />
       <module name="mysql_demo" />
@@ -79,12 +86,29 @@
           </settings>
         </artifact>
       </deployment>
-      <server-settings />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="9c60a584-5f75-4c23-9827-07c797a4fcfb" />
+      </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
@@ -108,6 +132,8 @@
       <updated>1646045935692</updated>
       <workItem from="1646045936837" duration="2846000" />
       <workItem from="1646057790551" duration="400000" />
+      <workItem from="1646109043579" duration="728000" />
+      <workItem from="1646212146854" duration="772000" />
     </task>
     <servers />
   </component>
