@@ -12,8 +12,8 @@ public class ParamTest {
         x = 3 * x;
         System.out.println("End of method: x = " + x);
     }
-    public static void tripleValue(Employee x){
-        x.raiseSalary(200);
-        System.out.println("End of method: salary = " + x.getSalary());
-    }
+//    public static void tripleValue(Employee x){
+//        x.raiseSalary(200);
+//        System.out.println("End of method: salary = " + x.getSalary());
+//    }
 }
