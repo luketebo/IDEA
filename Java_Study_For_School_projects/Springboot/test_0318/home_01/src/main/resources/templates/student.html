@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">菜鸡教程</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="http://localhost/student">student</a></li>
+                    <li><a href="http://localhost/teacher">teacher</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>identify</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="s:${stu}">
+            <td th:text="${s.id}">id</td>
+            <td th:text="${s.name}">name</td>
+            <td th:text="${s.age}">age</td>
+            <td th:text="${s.identity}">identity</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
