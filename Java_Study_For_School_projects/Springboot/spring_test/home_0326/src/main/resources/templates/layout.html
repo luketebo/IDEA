@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div th:fragment="myheader">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">菜鸡教程</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="http://localhost/student">student</a></li>
+                        <li class="active"><a href="http://localhost/teacher">teacher</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div th:replace="::maindiv"></div>
+    <div th:fragment="leftBar">
+        左边  第二个作业
+    </div>
+    <div th:fragment="endBar">
+        尾巴
+    </div>
+</div>
+
+
+
+</body>
+</html>

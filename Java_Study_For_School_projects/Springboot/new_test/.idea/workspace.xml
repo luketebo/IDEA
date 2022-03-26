@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8eb88783-a180-4cec-9e75-3ed9d3b8bb68" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/../../JAVA" beforeDir="false" afterPath="$PROJECT_DIR$/../../JAVA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +42,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -50,6 +52,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -64,6 +71,9 @@
       <workItem from="1647938147892" duration="59000" />
       <workItem from="1647955726108" duration="1378000" />
       <workItem from="1648038643851" duration="616000" />
+      <workItem from="1648089097593" duration="136000" />
+      <workItem from="1648136881685" duration="840000" />
+      <workItem from="1648197484905" duration="80000" />
     </task>
     <servers />
   </component>
