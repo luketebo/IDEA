@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d90dd99f-adab-4f06-8245-4f04ba79e96b" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/../../JAVA" beforeDir="false" afterPath="$PROJECT_DIR$/../../JAVA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/src/main/java/com/luketebo/Home0326Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/src/main/java/com/luketebo/controller/DemoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/src/main/java/com/luketebo/model/Teacher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/src/main/resources/templates/common.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/src/main/resources/templates/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/src/main/resources/templates/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/src/main/resources/templates/t1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_0326/src/test/java/com/luketebo/home_0326/Home0326ApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="26y8k8uTtXtsMAaJGNlt1XDvkWi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring/home_0326" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="d90dd99f-adab-4f06-8245-4f04ba79e96b" name="变更" comment="" />
+      <created>1648384606295</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648384606295</updated>
+      <workItem from="1648384607525" duration="540000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
