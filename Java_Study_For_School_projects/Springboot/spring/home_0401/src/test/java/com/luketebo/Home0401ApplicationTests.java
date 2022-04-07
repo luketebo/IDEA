@@ -28,6 +28,16 @@ class Home0401ApplicationTests {
        }
     }
 
+    @Test
+    void testMP_insert(){
+        cla.deleteById(3);
+        List<Classes> cl = cla.selectList(null);
+        for(Classes c : cl){
+            System.out.println(c);
+        }
+    }
+
+
 
     @Test
     void contextLoads() {

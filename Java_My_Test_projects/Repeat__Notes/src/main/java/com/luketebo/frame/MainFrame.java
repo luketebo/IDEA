@@ -6,6 +6,9 @@ import java.net.URL;
 
 // 测试button 设置图标的方法
 public class MainFrame extends JFrame {
+
+
+
     public static void main(String[] args) {
         MainFrame mainFrame = new MainFrame();
         mainFrame.setVisible(true);
