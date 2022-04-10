@@ -11,6 +11,6 @@ spring:
 
 mybatis-plus:
   configuration:
-    log-impl: org.
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 

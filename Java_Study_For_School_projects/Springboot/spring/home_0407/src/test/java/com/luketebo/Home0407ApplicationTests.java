@@ -16,7 +16,7 @@ class Home0407ApplicationTests {
     @Test
     void FindAll(){
         studentDao.selectList(null);
-        
+
     }
 
     @Test
