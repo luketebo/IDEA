@@ -1,10 +1,10 @@
-package com.luketebo.domain;
+package com.luketebo.entity;
 
 import lombok.Data;
 
 @Data
-public class Book {
-    private int id;
+public class Company {
+    private Integer id;
     private String type;
     private String name;
 }
