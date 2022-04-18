@@ -1,0 +1,59 @@
+body {
+    background: #eee;
+}
+
+.box {
+    width: 800px;
+    background: #fefefe;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 40px auto;
+}
+
+.title {
+    color: #666;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    margin: 10px 0
+}
+
+.teacher ul {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid #ccc
+}
+
+.teacher li {
+    line-height: 32px
+}
+
+.pageList {
+    margin-top: 20px;
+    text-align: center
+}
+
+.pageList span {
+    margin: 0 2px
+}
+
+.pageList button {
+    padding: 6px 10px;
+    cursor: pointer
+}
+
+.pageList button:disabled {
+    cursor: default
+}
+
+#progress div {
+    width: 0;
+    height: 1px;
+    position: fixed;
+    top: 0;
+    background-color: #38f;
+    box-shadow: 1px 1px 1px #6bf;
+    transition: all 0.8s
+}
