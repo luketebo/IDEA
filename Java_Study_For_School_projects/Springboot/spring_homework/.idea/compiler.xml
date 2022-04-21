@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="home_0421" />
+        <module name="home_0401" />
+        <module name="home_0326" />
+        <module name="home_0414" />
+        <module name="home_0409_demo" />
+        <module name="home_0415" />
+        <module name="home_0407" />
+        <module name="home_0409" />
+        <module name="springboot_01_ssmp" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="home_0326" target="1.8" />
+      <module name="home_0401" target="1.8" />
+      <module name="home_0407" target="1.8" />
+      <module name="home_0409" target="1.8" />
+      <module name="home_0409_demo" target="1.8" />
+      <module name="home_0414" target="1.8" />
+      <module name="home_0415" target="1.8" />
+      <module name="home_0421" target="1.8" />
+      <module name="self_0327" target="1.8" />
+      <module name="springboot_01_ssmp" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="home_0326" options="-parameters" />
+      <module name="home_0401" options="-parameters" />
+      <module name="home_0407" options="-parameters" />
+      <module name="home_0409" options="-parameters" />
+      <module name="home_0409_demo" options="-parameters" />
+      <module name="home_0414" options="-parameters" />
+      <module name="home_0415" options="-parameters" />
+      <module name="home_0421" options="-parameters" />
+      <module name="self_0327" options="-parameters" />
+      <module name="springboot_01_ssmp" options="-parameters" />
+    </option>
+  </component>
+</project>

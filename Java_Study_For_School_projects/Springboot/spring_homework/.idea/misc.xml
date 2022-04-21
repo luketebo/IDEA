@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../spring/home_0326/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring/home_0401/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring/home_0407/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring/home_0409/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring/home_0409_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring/home_0414/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring/home_0415/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring/springboot_01_ssmp/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring/home_0421/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
