@@ -14,6 +14,7 @@
         <module name="home_0409_demo" />
         <module name="home_0415" />
         <module name="home_0407" />
+        <module name="home_0428" />
         <module name="home_0409" />
         <module name="springboot_01_ssmp" />
       </profile>
@@ -28,6 +29,7 @@
       <module name="home_0415" target="1.8" />
       <module name="home_0421" target="1.8" />
       <module name="home_0422" target="1.8" />
+      <module name="home_0428" target="1.8" />
       <module name="self_0327" target="1.8" />
       <module name="springboot_01_ssmp" target="1.8" />
     </bytecodeTargetLevel>
@@ -43,6 +45,7 @@
       <module name="home_0415" options="-parameters" />
       <module name="home_0421" options="-parameters" />
       <module name="home_0422" options="-parameters" />
+      <module name="home_0428" options="-parameters" />
       <module name="self_0327" options="-parameters" />
       <module name="springboot_01_ssmp" options="-parameters" />
     </option>

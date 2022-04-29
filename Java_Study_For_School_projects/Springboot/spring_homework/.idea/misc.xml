@@ -13,10 +13,16 @@
         <option value="$PROJECT_DIR$/../spring/springboot_01_ssmp/pom.xml" />
         <option value="$PROJECT_DIR$/../spring/home_0421/pom.xml" />
         <option value="$PROJECT_DIR$/../spring/home_0422/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring/home_0428/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SwUserDefinedSpecifications">
+    <option name="specTypeByUrl">
+      <map />
+    </option>
   </component>
 </project>

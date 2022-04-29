@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1>Student List</h1>
+<table class="table table-bordered table-striped">
+    <a class="btn btn-primary" id = "addstu">添加学生</a>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Score</th>
+        <th>Date</th>
+        <th>Operate</th>
+    <tr>
+    </thead>
+    <tbody>
+    <tr th:each="stu:${student}">
+        <td th:text="${stu.id}">1</td>
+        <td th:text="${stu.id}">张三</td>
+        <td th:text="${stu.id}">100</td>
+        <td th:text="${stu.id}">2018-01-01</td>
+        <td>
+            <a href="javascript:void(0)" class="btn btn-primary" th:onclick="'updatestu('+${stu.id}+')'">Edit</a>
+<!--            去默认行为-->
+            <a href="javascript:void(0)" class="btn btn-danger" th:onclick="'delstu('+${stu.id}+')'">Delete</a>
+        </td>
+    </tr>
+    <script>
+        function updatestu(id){
+            window.location.href="/updatestu?id"+id;
+        }
+        function delstu(id){
+            if(confirm("确定删除吗？")){
+                window.location.href="delstu?id="+id;
+            }
+        }
+
+        $("#addstu").click(function (){
+            window.location.href = "addstu.html";
+        })
+
+    </script>
+<!--    <?php foreach ($students as $student): ?>-->
+<!--        <tr>-->
+<!--            <td><?php echo $student->getId(); ?></td>-->
+<!--            <td><?php echo $student->getName(); ?></td>-->
+<!--            <td><?php echo $student->getScore(); ?></td>-->
+<!--            <td><?php echo $student->getDate(); ?></td>-->
+<!--            <td>-->
+<!--                <a href="<?php echo $this->getUrl('edit', ['id' => $student->getId()]); ?>">Edit</a>-->
+<!--                <a href="<?php echo $this->getUrl('delete', ['id' => $student->getId()]); ?>">Delete</a>-->
+<!--            </td>-->
+<!--        </tr>-->
+    </tbody>
+</table>
+</body>
+</html>

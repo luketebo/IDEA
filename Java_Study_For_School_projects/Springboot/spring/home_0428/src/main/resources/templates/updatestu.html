@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h3 class="text-center">更新信息</h3>
+        <hr>
+        <form class="form-horizontal" role="form" method="post" th:action="@{/updatestu}">
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">编号</label>
+                <div class="col-sm-10">
+                    <input type="text" disabled class="form-control" name="name" id="name" placeholder="请输入编号" th:value="{student.id}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="score" class="col-sm-2 control-label" >成绩</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="score" id="score" placeholder="请输入成绩">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="enrollDate" class="col-sm-2 control-label" >入学日期</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="enrollDate" id="enrollDate" placeholder="请输入入学日期" th:>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" id="reback" class="btn btn-default">确认</button>
+                    <button type="submit"  class="btn btn-default">返回</button>
+                </div>
+            </div>
+        </form>
+    </div>
+<script>
+    $("#reback").click(function () {
+        window.location.href = "student.html";
+    });
+</script>
+
+</body>
+</html>
