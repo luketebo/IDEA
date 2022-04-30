@@ -37,7 +37,6 @@ public class StudentController {
     public String delstu(Integer id) {
         studentService.removeById(id);
         return "redirect:/student";
-
     }
     @GetMapping("updatestu")
     public String updatestu(Integer id, Model model) {
