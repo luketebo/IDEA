@@ -3,28 +3,9 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/../spring/home_0326/pom.xml" />
-        <option value="$PROJECT_DIR$/../spring/home_0401/pom.xml" />
-        <option value="$PROJECT_DIR$/../spring/home_0407/pom.xml" />
-        <option value="$PROJECT_DIR$/../spring/home_0409/pom.xml" />
-        <option value="$PROJECT_DIR$/../spring/home_0409_demo/pom.xml" />
-        <option value="$PROJECT_DIR$/../spring/home_0414/pom.xml" />
-        <option value="$PROJECT_DIR$/../spring/home_0415/pom.xml" />
-        <option value="$PROJECT_DIR$/../spring/springboot_01_ssmp/pom.xml" />
-        <option value="$PROJECT_DIR$/../spring/home_0421/pom.xml" />
-        <option value="$PROJECT_DIR$/../spring/home_0422/pom.xml" />
-        <option value="$PROJECT_DIR$/../spring/home_0428/pom.xml" />
-        <option value="$PROJECT_DIR$/../spring/home_0428_demo/pom.xml" />
-        <option value="$PROJECT_DIR$/../home_0505/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring/home_0505/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
-  </component>
-  <component name="SwUserDefinedSpecifications">
-    <option name="specTypeByUrl">
-      <map />
-    </option>
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
