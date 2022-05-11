@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be48e6f6-86e2-413f-9fa7-c0bcb71330dc" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/webapp/404.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/luketebo/demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/luketebo/demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/luketebo/demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/luketebo/demo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test_0228_demo/test/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/classes/com/example/test/HelloServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/500.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/WEB-INF/classes/com/example/test/HelloServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/WEB-INF/lib/jsp-api.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/WEB-INF/lib/servlet-api.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test_0228_demo/test/target/test-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
+    <list default="true" id="be48e6f6-86e2-413f-9fa7-c0bcb71330dc" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/../../Java_Study_For_School_projects/JAVA" beforeDir="false" afterPath="$PROJECT_DIR$/../../Java_Study_For_School_projects/JAVA" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,17 +35,13 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RunManager" selected="应用程序.demo">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Code-repository/IDEA/JavaWeb_projects/day02_xml"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.demo">
     <configuration name="demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.luketebo.demo" />
       <module name="mysql_demo" />
@@ -116,13 +93,11 @@
         </option>
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="应用程序.demo" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
       <changelist id="be48e6f6-86e2-413f-9fa7-c0bcb71330dc" name="变更" comment="" />
@@ -134,6 +109,7 @@
       <workItem from="1646057790551" duration="400000" />
       <workItem from="1646109043579" duration="728000" />
       <workItem from="1646212146854" duration="772000" />
+      <workItem from="1652197944539" duration="33000" />
     </task>
     <servers />
   </component>

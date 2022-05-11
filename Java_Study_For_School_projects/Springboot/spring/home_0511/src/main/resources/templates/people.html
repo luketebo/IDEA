@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header">
+                <h1>学生信息</h1>
+            </div>
+            <p class="lead">学生信息</p>
+            <p>
+                <a href="http://localhost/people-add" class="btn btn-success">添加学生</a>
+            </p>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th>学号</th>
+                            <th>姓名</th>
+                            <th>成绩</th>
+                            <th>入学日期</th>
+                            <th>头像</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="peo:${people}">
+                            <td th:text="${peo.id}"></td>
+                            <td th:text="${peo.name}"></td>
+                            <td th:text="${peo.score}"></td>
+                            <td th:text="${peo.enrollDate}"></td>
+                            <td th:text="${peo.photo}"></td>
+<!--                            <td th:text="${stu.id}">2018-01-01</td>-->
+                            <td>
+                                <a href="javascript:void(0)" class="btn btn-primary" th:onclick="'editStu('+${peo.id}+')'">编辑</a>
+                                <a href="javascript:void(0)" class="btn btn-danger" th:onclick="'delStu('+${peo.id}+')'">删除</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function delStu(id){
+        if(confirm("确认删除？")){
+            window.location.href="http://localhost/people-delete-one?id="+id;
+        }
+    }
+    function editStu(id){
+        window.location.href="http://localhost/people-edit?id="+id;
+    }
+</script>
+
+</body>
+</html>
