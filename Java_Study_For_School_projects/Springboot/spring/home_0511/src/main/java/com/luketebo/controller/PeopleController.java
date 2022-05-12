@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
@@ -23,6 +24,22 @@ import java.util.UUID;
 public class PeopleController {
     @Autowired
     private PeopleService peopleService;
+
+    // 测试
+
+    // 清空缓存 很重呀
+    @GetMapping("getPeo/{id}")
+    public void getPeo(@PathVariable Integer id) {
+        People peo = peopleService.getOne(id);
+    }
+
+
+
+
+
+
+
+
 
     // 通过people 访问 people.html
     @GetMapping("/people")

@@ -18,6 +18,17 @@ spring:
     resources:
       staticLocations: classpath:/static/, file:${photo.file.dir}
 
+  redis:
+    host: localhost
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 100
+        max-idle: 10
+        min-idle: 2
+        max-wait: 10000
+    password:
+
 photo:
   file:
     dir: D:\Code-repository\IDEA\Java_Study_For_School_projects\Springboot\spring\home_0511\src\main\resources\upload
@@ -26,3 +37,5 @@ mybatis-plus:
   configuration:
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:mapper/**/*.xml
+
+
