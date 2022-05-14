@@ -69,8 +69,7 @@
                 <p class="buttonP">
                     <!--<a href="/download/2018年度中国城市活力研究报告.pdf" download>-->
                     <a th:href="@{/download/{fileName}(fileName=${usr.fileName})}" download>
-                        <button type="button" class="btn btn-primary">下载</button>
-                    </a>
+                        <button type="button" class="btn btn-primary">下载</button> </a>
                 </p>
             </td>
             <p th:remove="tag" th:utext="${(status.index+1)%5==0 ? '&lt;/tr&gt;':''}"/>

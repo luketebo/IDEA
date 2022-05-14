@@ -1,50 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <title>更新学生信息</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-
-    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">
-    <h3 class="text-center">修改学生</h3>
+    <h3 class="text-center">修改学生信息</h3>
     <hr>
-    <form class="form-horizontal" role="form" method="post" th:action="@{/update}">
+    <form class="form-horizontal" role="form" th:action="@{/update}" method="post" enctype="multipart/form-data">
         <div class="form-group">
-            <label for="id" class="col-sm-2 control-label">学号</label>
+            <label class="col-sm-2 control-label">编号</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="id" id="id" placeholder="请输入学号" th:value="${people.id}">
+                <p class="form-control-static" th:text="${student.id}"></p>
+                <input type="hidden" class="form-control" name="id" id="id" placeholder="请输入编号" th:value="${student.id}">
             </div>
         </div>
         <div class="form-group">
-            <label for="name" class="col-sm-2 control-label" >姓名</label>
+            <label for="name" class="col-sm-2 control-label">姓名</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="name" id="name" placeholder="请输入姓名" th:value="${people.name}">
+                <input type="text" class="form-control" name="name" id="name" placeholder="请输入名字" th:value="${student.name}">
             </div>
         </div>
         <div class="form-group">
             <label for="score" class="col-sm-2 control-label">成绩</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="score" id="score" placeholder="请输入成绩" th:value="${people.score}">
+                <input type="text" class="form-control" name="score" id="score" placeholder="请输入成绩" th:value="${student.score}">
             </div>
         </div>
         <div class="form-group">
             <label for="enrolldate" class="col-sm-2 control-label">日期</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="enrolldate" id="enrolldate" placeholder="请输入日期" th:value="${#dates.format(people.enrollDate, 'yyyy/MM/dd')}">
+                <input type="text" class="form-control" name="enrolldate" id="enrolldate" placeholder="请输入日期" th:value="${#dates.format(student.enrollDate, 'yyyy/MM/dd')}">
             </div>
         </div>
         <div class="form-group">
             <label for="img" class="col-sm-2 control-label">头像</label>
             <div class="col-sm-2">
-                <img th:src="@{/upload/{id}(id=${people.getPhoto()})}" alt="">
+                <img th:src="@{/upload/{id}(id=${student.getPhoto()})}" alt="">
             </div>
             <div class="col-sm-8">
                 <input type="file" class="form-control" name="img" id="img" placeholder="请传输文件">
@@ -59,11 +55,9 @@
     </form>
 </div>
 <script>
-    $("#reBack").click(function () {
-        window.location.href="http://localhost/people";
+    $("#return").click(function(){
+        window.history.back();
     });
 </script>
-
-
 </body>
 </html>

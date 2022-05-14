@@ -36,12 +36,12 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr th:each="peo:${people}">
+                        <tr th:each="peo : ${people}">
                             <td th:text="${peo.id}"></td>
                             <td th:text="${peo.name}"></td>
                             <td th:text="${peo.score}"></td>
                             <td th:text="${peo.enrollDate}"></td>
-                            <td th:text="${peo.photo}"></td>
+                            <td ><img th:src="@{/upload/{id}(id=${peo.getPhoto()})}" style="height:40px;width:40px"></td>
 <!--                            <td th:text="${stu.id}">2018-01-01</td>-->
                             <td>
                                 <a href="javascript:void(0)" class="btn btn-primary" th:onclick="'editStu('+${peo.id}+')'">编辑</a>

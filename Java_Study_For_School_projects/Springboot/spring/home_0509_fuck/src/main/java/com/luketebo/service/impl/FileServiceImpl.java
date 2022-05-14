@@ -28,6 +28,11 @@ public class FileServiceImpl implements FileService {
 
 
     @Override
+    public List<FileInformation> getAllFile() {
+        return fileMapper.findAllFile();
+    }
+
+    @Override
     public String uploadFile(MultipartFile file, MultipartFile image, String title) throws Exception {
         String os = System.getProperty("os.name");
         File imagePath;  //封面图片存放地址
@@ -47,6 +52,8 @@ public class FileServiceImpl implements FileService {
             fileRealPath = new File(rootPath.getAbsolutePath()+"/file/");
             imagePath = new File(rootPath.getAbsolutePath()+"/images");
         }
+        System.out.println(fileRealPath);
+        System.out.println(imagePath);
         //判断文件夹是否存在
         if(!fileRealPath.exists()){
             //不存在，创建
@@ -79,18 +86,6 @@ public class FileServiceImpl implements FileService {
         System.out.println("resultPath:"+resultPath.getCanonicalPath());
         System.out.println("imageResultPath:"+imageResultPath.getCanonicalPath());
         return "true！";
-    }
-
-    /**
-     * 查询数据库中所有文件信息的方法
-     * @author xct
-     * @date 2020-11-20 16:42
-     * @param
-     * @return java.util.List<com.xct.file_upload_uownload.entity.FileInformation>
-     */
-    @Override
-    public List<FileInformation> getAllFile() {
-        return fileMapper.findAllFile();
     }
 }
 

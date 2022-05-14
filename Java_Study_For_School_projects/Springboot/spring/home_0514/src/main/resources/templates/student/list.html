@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">教务系统</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">学生</a></li>
+                    <li><a href="#">教师</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            课程
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">jmeter</a></li>
+                            <li><a href="#">EJB</a></li>
+                            <li><a href="#">Jasper Report</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">分离的链接</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">另一个分离的链接</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h3 class="text-center">学生信息管理</h3>
+    <hr>
+    <button class="btn btn-success" style="margin-bottom:8px" id="addstu">添加数据</button>
+    <table class="table table-condensed table-striped">
+        <thead>
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>成绩</th>
+            <th>入学日期</th>
+            <th>头像</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="stu : ${students}">
+            <td th:text="${stu.id}"></td>
+            <td th:text="${stu.name}"></td>
+            <td th:text="${stu.score}"></td>
+            <td th:text="${#dates.format(stu.enrollDate, 'yyyy-MM-dd')}"></td>
+            <td><img th:src="@{/upload/{id}(id=${stu.getPhoto()})}"  style="height:40px;width:40px"></td>
+            <td><a class="btn btn-info btn-sm" href="#" th:onclick="'updatestu('+${stu.id}+')'"><span class="glyphicon glyphicon-pencil"></span> 更新</a>&nbsp;&nbsp;<a class="btn btn-danger btn-sm" href="javascript:void(0);" th:onclick="'delstu('+${stu.id}+')'"><span class="glyphicon glyphicon-trash" ></span> 删除</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    function updatestu(id){
+        window.location.href="/updatestu?id="+id;
+    }
+    function delstu(id){
+        if(confirm("要删除吗？")){
+            window.location.href="/delstu?id="+id;
+        }
+    }
+    $("#addstu").click(function(){
+     window.location.href="/addstu";
+    });
+</script>
+</body>
+</html>

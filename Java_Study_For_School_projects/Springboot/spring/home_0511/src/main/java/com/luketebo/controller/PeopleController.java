@@ -4,6 +4,7 @@ import com.luketebo.entity.People;
 import com.luketebo.service.PeopleService;
 import com.luketebo.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,21 +26,34 @@ public class PeopleController {
     @Autowired
     private PeopleService peopleService;
 
+    @Value("${photo.file.dir}")
+    private String realpath;
+
     // 测试
 
-    // 清空缓存 很重呀
+    // 清空缓存 很重要
     @GetMapping("getPeo/{id}")
     public void getPeo(@PathVariable Integer id) {
-        People peo = peopleService.getOne(id);
+        People people = peopleService.getOne(id);
     }
 
+    // 图片上传
+    private String uploadPhoto(MultipartFile img, String originalFilename) throws IOException {
+        String fileName = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+        String ext = originalFilename.substring(originalFilename.lastIndexOf("."));
+        String newFilename = fileName + ext;
+        img.transferTo(new File(realpath, newFilename));
+        return newFilename;
+    }
 
-
-
-
-
-
-
+    @PostMapping("/update")
+    public String updatePeo(People people, MultipartFile img) throws IOException {
+        String originalFilename = img.getOriginalFilename();
+        String newFilename = uploadPhoto(img, originalFilename);
+        people.setPhoto(newFilename);
+        peopleService.updateById(people);
+        return "redirect:/people";
+    }
 
     // 通过people 访问 people.html
     @GetMapping("/people")

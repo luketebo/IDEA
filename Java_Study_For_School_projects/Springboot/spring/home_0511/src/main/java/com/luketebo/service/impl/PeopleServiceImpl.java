@@ -15,8 +15,6 @@ import java.util.Collection;
 @Service
 public class PeopleServiceImpl extends ServiceImpl<PeopleMapper, People> implements PeopleService {
 
-    @Autowired
-    private RedisTemplate redisTemplate;
 
     @Override
     @Cacheable(cacheNames = "people") // 缓存
