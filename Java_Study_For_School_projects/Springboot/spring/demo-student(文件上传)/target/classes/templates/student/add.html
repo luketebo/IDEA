@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>添加学生信息</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h3 class="text-center">添加学生信息</h3>
+    <hr>
+    <form class="form-horizontal" role="form" th:action="@{/save}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">姓名</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="name" id="name" placeholder="请输入名字">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="score" class="col-sm-2 control-label">成绩</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="score" id="score" placeholder="请输入成绩">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="enrollDate" class="col-sm-2 control-label">日期</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="enrollDate" id="enrollDate" placeholder="请输入日期">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="img" class="col-sm-2 control-label">头像</label>
+            <div class="col-sm-10">
+                <input type="file" class="form-control" name="img" id="img" placeholder="请传输文件">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">确认添加</button>
+                <button type="button" class="btn btn-warning" id="return">返回</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $("#return").click(function(){
+        window.history.back();
+    });
+</script>
+</body>
+</html>
