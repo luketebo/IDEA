@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d0d3766-5d93-4574-b755-647b91a87e12" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/luketebo/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/luketebo/controller/DemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home_0602/src/main/java/com/luketebo/mapper/AuthorityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home_0602/src/main/java/com/luketebo/service/impl/UserDetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home_0602/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home_0602/src/main/resources/templates/detail/student/stu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home_0602/src/main/resources/templates/detail/teacher/tea.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home_0602/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../home_0602/src/main/resources/templates/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../JAVA" beforeDir="false" afterPath="$PROJECT_DIR$/../../../JAVA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../home_0602/src/main/java/com/luketebo/mapper/AccountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../home_0602/src/main/java/com/luketebo/mapper/AccountMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../home_0602/src/main/java/com/luketebo/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../home_0602/src/main/java/com/luketebo/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../home_0602/src/main/java/com/luketebo/service/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../home_0602/src/main/java/com/luketebo/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../home_0602/src/main/resources/application.properties" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../../Maven/apache-maven-3.8.4" />
+        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.8.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2A3lLePKLfdX5212B6F5bwbeY9A" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Code-repository/IDEA/Java_Study_For_School_projects/SpringBoot/spring/2022-06/home_0603",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.Home0519AddApplication">
+    <configuration name="Home0519AddApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="home_0519_add" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.luketebo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.luketebo" />
+      <option name="MAIN_CLASS_NAME" value="com.luketebo.Home0519AddApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Home0519AddApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="home_0519_add" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.luketebo.Home0519AddApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Home0519AddApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d0d3766-5d93-4574-b755-647b91a87e12" name="Changes" comment="" />
+      <created>1654246097062</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654246097062</updated>
+      <workItem from="1654246099759" duration="3689000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<div class="container">
+    <h1 align="center">教务信息查询系统</h1>
+    <div sec:authorize="isAnonymous()">
+        <h2 align="center">游客你好，如果要查询信息<a th:href="@{/login}">请登录</a></h2>
+    </div>
+    <div sec:authorize="isAuthenticated()">
+        <h2 align="center"><span sec:authentication="name"></span>您好，您的用户权限为<span sec:authentication="principal.authorities"></span>,您有权查询以下信息</h2>
+        <form th:action="@{/logout}" method="post">
+            <input th:type="submit" th:value="注销" >
+        </form>
+    </div>
+    <div sec:authorize="hasRole('common')">
+        <h2 >学生通道</h2>
+        <a th:href="@{detail/student/stu}">学生信息</a>
+    </div>
+    <div sec:authorize="hasRole('vip')">
+        <h2>老师通道</h2>
+        <a th:href="@{detail/teacher/tea}">教师信息</a>
+    </div>
+</div>
+
+
+</body>
+</html>
