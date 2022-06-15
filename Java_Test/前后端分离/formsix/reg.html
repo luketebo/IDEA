@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>简单表单提交例子--自己组装Json方式</title>
+	</head>
+	<body>
+		<label id="label_title">简单表单提交例子--自己组装Json方式</label>
+		<!-- 页面显示标题 -->
+		<div id="num_data">
+			<p>用户名：<input type="text" id="username" name="username" value="" /></p>
+			<p>密  码：<input type="text" id="pwd" name="pwd" value="" /></p>
+		</div>
+			
+		<div id="button_btn">
+			<p>
+				<button type="button" id="login" onclick="login()">确定</button>&nbsp&nbsp&nbsp
+				<!-- 登录按钮 -->
+				<button type="button" id="reset">重置</button>
+				<!-- 重置按钮 -->
+			</p>
+		</div>
+	</body>	
+	<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function login(){
+			// 获取输入框中的内容
+			var username=document.getElementById("username").value;
+			var password=document.getElementById("pwd").value;
+			// 将获取的内容封装到num的一个对象中传入后端
+			var user={
+				username:username,
+				password:password,
+			}
+			//将对象转化为json格式
+			var user1=JSON.stringify(user);
+			// 构造post接口路径
+			var path = "http://127.0.0.1:8080/loginPost.html";
+			//构造get接口路径
+			//var path = "http://localhost:8080/loginGet.html"+"?username="+username+"&password="+password;
+			//将数据传入后端并接受后端处理后的结果
+			$.ajax({
+				// 页面信息（对象）传递给Java程序
+				url: path,//访问接口路径
+				type: "post",//使用post的方法传入后端
+				// type: "get",//使用get的方法传入后端
+				dataType: 'json',//提交数据的类型
+				contentType: "application/json;charset=utf-8",//传输的文件类型
+				data: user1, //post需要，get不需要 对象转化为Json对象
+				success: function(result) {
+					//将后端的结果数据转化为json文件格式
+					var javaResult = JSON.stringify(result);
+					//将javaResult的json文件存入seccsion中，并对其命名为num
+					window.sessionStorage.setItem("javaResult", javaResult);
+							
+					if(result.flag=="success"){
+						//后端返回的标志位，如果计算成功就跳转到resul.html这个页面中
+						window.location.href="../formone/result.html"
+					}
+					else{
+						//其它flag，则跳转到tip.html的页面中
+						window.location.href="../formone/tip.html";
+					}
+				},
+				error: function(result) {
+					//若传输数据不成功则,存进sessino中，并跳转到tip.html页面
+					sessionStorage.setItem("error", true);
+					window.location.href="../formone/tip.html";
+				}
+			});
+		}
+	</script>
+</html>

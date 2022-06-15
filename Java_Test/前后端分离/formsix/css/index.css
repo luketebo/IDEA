@@ -1,0 +1,20 @@
+#label_title {
+	position: absolute;
+	left: 45%;
+}
+
+#num_data {
+	position: absolute;
+	top: 40px;
+	left: 45%;
+}
+
+#button_btn {
+	position: absolute;
+	top: 550px;
+	left: 45%;
+}
+
+input {
+	width: 50px;
+}

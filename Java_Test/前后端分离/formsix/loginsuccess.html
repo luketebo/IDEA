@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>结果页面</title>
+		
+	</head>
+	<body>
+		<label id="label_title">简单表单提交的信息</label>
+		<!-- 页面显示标题 -->
+		<form>
+			<div id="num_data">
+				<p>用户名：<input type="text" id="username" name="username" value="" /></p>
+				<p>密码：<input type="text" id="pwd" name="pwd" value="" /></p>
+			</div>
+
+			<div id="button_btn">
+				<p>
+					<button type="button" id="return" onclick="return2login()">返回</button>
+				<!-- 返回按钮 -->
+				</p>
+			</div>
+		</form>
+	
+	</body>
+	<script type="text/javascript">
+		var javaResult=JSON.parse(window.sessionStorage.getItem("javaResult"));
+		// var data={
+		// 	username:"string1",
+		// 	password:"string2",
+		// }
+		// var javaResult={
+		// 	flag:"string3",
+		// 	data:data,
+		// }
+		document.getElementById("username").value=javaResult.data.username;
+		document.getElementById("pwd").value=javaResult.data.password;
+
+		function return2login(){
+			window.location.href="../formone/index.html"
+		}
+	</script>
+</html>
