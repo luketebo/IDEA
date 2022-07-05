@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://luketebo.top/luketebo?&useSSL=false
+    username: luketebo
+    password: luketebo
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+
+  web:
+    resources:
+      static-locations: classpath:/static/,file:${img.file.dir}
+
+img:
+  file:
+    dir: D:\Documents\GitHub\spring-works\src\main\resources\static\img
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 8081
+

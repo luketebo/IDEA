@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+</head>
+<body>
+
+<div class="col-md-2" th:fragment="common_left_side_stu">
+  <div class="card">
+    <div class="card-header">
+      <h3>学生系统</h3>
+    </div>
+    <div class="accordion" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+          >
+            首页
+          </button>
+        </h2>
+        <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample"
+        >
+          <div
+              class="accordion-body"
+              style="margin: -5px 0px -20px 0px"
+          >
+            <ul style="list-style: none">
+              <li><a class="dropdown-item" href="#" id="gaiNan">概览</a></li>
+              <li>
+                <a class="dropdown-item" href="#" id="chaKan">查看</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+          >
+            管理
+          </button>
+        </h2>
+        <div
+            id="flush-collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <div
+                class="accordion-body"
+                style="margin: -15px 0px -40px 0px"
+            >
+              <ul style="list-style: none">
+                <li><a class="dropdown-item" href="#" onclick="assignmentList()">查看作业</a></li>
+                <li>
+                  <a class="dropdown-item" href="#" onclick="workList()">我的提交</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">加入班级</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown-item" style="padding-top: 10px; padding-left: 20px">
+      <a><p>留言板</p></a>
+    </div>
+  </div>
+</div>
+
+</body>
+<script
+    type="text/javascript"
+    th:src="@{/js/bootstrap.js}"
+></script>
+
+
+<script>
+
+  function assignmentList(){
+    $("#main").load("assignmentList");
+  }
+
+  function workList(){
+    $("#main").load("workList");
+  }
+
+</script>
+
+</html>

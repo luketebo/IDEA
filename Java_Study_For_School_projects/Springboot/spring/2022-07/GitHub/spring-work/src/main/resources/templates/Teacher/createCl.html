@@ -1,0 +1,132 @@
+<script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+<style>
+
+</style>
+
+<div id="crtCon" class="container d-flex flex-column justify-content-start">
+    <h1 class="title">创建班级</h1>
+    <div class="fun my-5">
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#InfoModal"
+            data-bs-action="new">创建班级</button>
+    </div>
+    <div class="rcd row" id="classes">
+        <div class="col-md-3">
+            <table class="table table-bordered table-hover align-middle">
+                <thead>
+                    <th>班级</th>
+                    <th>操作</th>
+                </thead>
+                <tbody id="info">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="InfoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text col-form-label">班级:</span>
+                        <input type="text" class="form-control" placeholder="班级" id="class_"
+                            aria-describedby="addon-wrapping">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="upload">确认</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    list_cl = [];
+    function op(ia) {
+        var html = "";
+        var operate = ["<button type=\"button\" id=\"", "\"class=\"", " >", "</button>"];
+        html += operate[0] + ia + "d";
+        html += operate[1];
+        html += "btn btn-danger\"";
+        html += "data-bs-container=\"body\" data-bs-toggle=\"popover\" data-bs-placement=\"top\" data-bs-title=\"确认删除吗？\"";
+        html += operate[2] + "删除" + operate[3];
+        return html;
+    }
+    $(
+        () => {
+            $.ajax({
+                url: "http://" + window.location.host + "/InfoGet/classes", type: "GET", success: (r) => {
+                    let sheet = r["data"];
+                    let table = "";
+
+                    for (let i in r["data"]) {
+                        if (r["data"][i].teacherId == createId) {
+                            table += "<tr>" + "<td>" + sheet[i].classId + "班</td>";
+                            table += "<td class=\"d-flex justify-content-evenly\">" + op(sheet[i].id) + "</td></tr>";
+                            list_cl.push(sheet[i].id);
+                        }
+                    }
+                    $("#info").append(table);
+                    $('[data-bs-toggle="popover"]').popover({ trigger: "focus" });
+
+                    for (let i in sheet)
+                        if (r["data"][i].teacherId == createId)
+                            $("#" + sheet[i]["id"] + "d").click(function () {
+                                if (prt) console.log("删除操作" + sheet[i]["id"]);
+                                bootstrap.Popover.getInstance(document.getElementById(sheet[i]["id"] + "d")).show();
+                                var f = $(this);
+                                if (f.attr("confirming") == "waiting") {
+                                    if (prt) console.log("delete");
+                                    $.ajax({
+                                        url: "http://" + window.location.host + "/InfoDelete/deleteCl", type: "DELETE", success: () => {
+                                            createCl();
+                                        }, data: JSON.stringify({
+                                            "id": sheet[i]["id"],
+                                        }), dataType: "json",
+                                        contentType: "application/json"
+                                    })
+                                } else {
+                                    f.text("确认");
+                                    f.attr("confirming", "waiting");
+                                }
+                            }).mouseout(function () {
+                                $(this).attr("confirming", "");
+                                $(this).text("删除");
+                                bootstrap.Popover.getInstance(document.getElementById(sheet[i]["id"] + "d")).hide();
+                            })
+                }
+            })
+        });
+        $( () => {
+            (() => {
+                $("#upload").click(() => {
+                    if(prt) console.log("添加班级捏");
+                    let title = $("#class_").val();
+                    var myModal = new bootstrap.Modal(document.getElementById("InfoModal"), {
+                        keyboard: false
+                    })
+                    $.ajax({
+                        url: "http://" + window.location.host + "/InfoPost/createCl", type: "POST", data: JSON.stringify({
+                            "classId": title,
+                            "teacherId": createId
+                        }), success: () => {
+                            myModal.hide();
+                            $("body").attr("style", "");
+                            $("div.modal-backdrop").remove();
+                            createCl();
+                        }, dataType: "json"
+                        , contentType: "application/json"
+                    })
+                })
+            })();
+        }
+    )
+</script>

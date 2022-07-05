@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>教学实训管理系统—登陆失败</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/login.js"></script>
+    <style>
+        body,td,th { font-family:  sans-serif; }
+        body { background-color: #ffffff; }
+    </style>
+</head>
+
+<body>
+<div class="wrapper">
+    <p id="p1"></p>
+</div>
+
+<script type="text/javascript">
+    window.onload = function f() {
+        var i =3;
+        var a = setInterval(function () {
+            i--;
+            if(i<=0){
+                document.getElementById("p1").innerHTML = "登陆失败,  返回登录界面";
+                clearInterval(a);
+                location = "/login";
+            }else {
+                document.getElementById("p1").innerHTML = "登陆失败, 还有"+i+"秒跳转回登录界面";
+                return false;
+            }
+        },1000)
+    }
+</script>
+
+</body>
+</html>

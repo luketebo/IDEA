@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        body {
+            width: 100%;
+        }
+
+        .accordion-body {
+            margin: 0 !important;
+            padding: 0.5rem 0rem;
+        }
+
+        .accordion-body ul {
+            padding-left: 0 !important;
+        }
+
+        #main {
+            display: flex;
+            width: auto;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        #main a {
+            text-decoration: none;
+            color: none;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            justify-content: center;
+        }
+
+        #main a p.icon {
+            font-size: 40px;
+            display: inline-block;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav th:replace="commons/common_header :: common_header"></nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div th:replace="commons/common_left_side_tea :: common_left_side_tea"></div>
+            <div class="col-md-10 " >
+<!--            <div th:replace="commons/common_tea_gaiNan :: gaiNan"></div>-->
+            <div th:replace="commons/common_tea_chaKan :: chaKan" ></div>
+                <div class="student">
+                <div id="main" class="mt-5">
+                    <a href="javascript:void(0);" onclick="createAs()">
+                        <p class="icon">📝</p>
+                        <p class="title">布置作业</p>
+                    </a>
+                    <a href="javascript:void(0);" onclick="checkAs()">
+                        <p class="icon">✔️</p>
+                        <p class="title">批改作业</p>
+                    </a>
+                    <a href="javascript:void(0);" onclick="readAs()" hidden>
+                        <p class="icon">📚</p>
+                        <p class="title">查看作业</p>
+                    </a>
+                    <a href="javascript:void(0);" onclick="createCl()">
+                        <p class="icon">👨‍🎓</p>
+                        <p class="title">创建班级</p>
+                    </a>
+                </div>
+
+                </div>
+                <style>
+                    .all{
+                        display: none;
+                    }
+                </style>
+
+            <!--    在这个模板下 添加代码-->
+            <!--        其他就尽量不要动-->
+            <!--    我偏不我就要大改    -->
+        </div>
+    </div>
+</body>
+<script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery-3.6.0.js}"></script>
+<script type="text/javascript" th:src="@{/js/test.js}"></script>
+<script type="text/javascript" th:src="@{/js/teacher.js}"></script>
+
+</html>

@@ -1,0 +1,60 @@
+<style>
+    .common_gaiNan{
+        margin: 0px 150px 0px 200px;
+    }
+</style>
+<script type="text/javascript" th:src="@{/js/jquery-3.6.0.js}"></script>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "http://localhost:8081/InfoGet/me",
+            type: "get",
+            async: true,
+            dataType: "json",
+            success: function (result) {
+                console.log(result);
+                var username = result.name;
+                var classId = result.id;
+                var post_ = result.post;
+                var hobby = result.hobby;
+                var name_tent = "姓名： " + username;
+                var class_tent = "班级： " + classId;
+                var post_tent = "职务： " + post_;
+                var hobby_tent = "爱好： " + hobby;
+                document.getElementById("username").innerText= name_tent
+                document.getElementById("classId").innerText = class_tent
+                document.getElementById("post").innerText = post_tent
+                document.getElementById("hobby").innerText = hobby_tent
+            }
+        })
+
+
+    })
+</script>
+<div class="contain-fluid common_gaiNan" th:fragment="gaiNan">
+    <div class="row" >
+        <div class="col-md-4">
+            <p>照片：<img th:src="@{/img/photo_cxXszp.jpg}" style="width: 100px; height: 120px; border-radius: 5px; margin-top: 18px; margin-left: 50px"></p>
+        </div>
+        <div class="col-md-4" style="margin-top: 55px; padding-left: 10px;" >
+           <p id = "username">姓名：  </p>
+        </div>
+        <div class="col-md-4" style="margin-top: 55px;">
+            <p id = "classId"></p>
+        </div>
+        <div class="col-md-3" style="margin-top: 55px;">
+            <p >身份： 老师</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 55px;">
+            <p id = "post"></p>
+        </div>
+        <div class="col-md-6" style="margin-top: 55px;">
+            <p id = "hobby"></p>
+        </div>
+    </div>
+</div>
+<script
+        type="text/javascript"
+        th:src="@{/js/bootstrap.js}"
+></script>
+

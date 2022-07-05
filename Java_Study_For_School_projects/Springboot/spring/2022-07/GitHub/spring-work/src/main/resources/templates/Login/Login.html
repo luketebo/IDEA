@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="utf-8">
+    <title>教学实训管理系统—登录</title>
+    <link rel="stylesheet" href="/css/login.css" type="text/css">
+    <style>
+        body,td,th { font-family:  sans-serif; }
+        body { background-color: #ffffff; }
+    </style>
+    <script type="text/javascript">
+        function f1(){
+            //1-5个汉字
+            var regx = /^[\u4e00-\u9fa5a-zA-Z0-9]{1,5}$/;
+            var username = document.getElementById("username").value;
+            if(regx.test(username)){
+                document.getElementById("d1").style.color = "green";
+                document.getElementById("d1").innerHTML="√";
+                return true;
+            }else{
+                document.getElementById("d1").style.color = "red";
+                document.getElementById("d1").innerHTML="×";
+                return false;
+            }
+        }
+        function f2(){
+            //5-12个字母或汉字
+            var regx = /^[a-zA-Z0-9]{5,12}$/;
+            var password = document.getElementById("password").value;
+            if(regx.test(password)){
+                document.getElementById("d2").style.color = "green";
+                document.getElementById("d2").innerHTML="√";
+                return true;
+            }else{
+                document.getElementById("d2").style.color = "red";
+                document.getElementById("d2").innerHTML="×";
+                return false;
+            }
+        }
+        function subForm(){
+            return f1() && f2();
+
+        }
+    </script>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="container">
+        <!--登录-->
+        <form th:action="@{/login}" th:method="post" onsubmit="return subForm()" >
+            <h1>Welcome</h1>
+            <input id="username" type="text" placeholder="Username" onblur="f1()" name="username" style="display: inline-block"><p id="d1" style="display: inline"></p>
+            <p style="margin: 0"></p>
+            <input id="password" type="password" placeholder="Password" onblur="f2()" name="password" style="display: inline-block"><p id="d2" style="display: inline"></p>
+            <input type="submit" value="Login">
+        </form>
+        <!--注册-->
+        <form action="/zhuCe" method="get" >
+            <input type="submit" value="Sign In" style="display: inline">
+        </form>
+    </div>
+</div>
+
+<script src="/js/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
+</head>
+
+<body>
+
+<!-- 表格 -->
+<table class="table">
+  <tr>
+    <th>序号</th>
+    <th>作业内容</th>
+    <th>创建时间</th>
+    <th>截至时间</th>
+    <th>标题</th>
+    <th>操作</th>
+  </tr>
+
+
+  <tr th:each="item:${assignmentList}">
+    <td th:text="${item.id}">作业编号</td>
+    <td th:text="${item.content}">作业1</td>
+    <td th:text="${#dates.format(item.createTime, 'yyyy-MM-dd HH:mm:ss')}">作业描述1</td>
+    <td th:text="${#dates.format(item.deadLine, 'yyyy-MM-dd HH:mm:ss')}">作业描述1</td>
+    <td th:text="${item.title}">2022-01-01</td>
+    <td>
+      <a href="#" th:onclick="tijiao([[${item.id}]],[[${item.title}]],[[${item.content}]])">提交作业</a>
+    </td>
+  </tr>
+</table>
+
+
+<!-- 模态框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">提交作业</h4>
+      </div>
+      <div class="modal-body">
+        <form  method="post" id="form">
+          <input type="hidden" name="assignmentId">
+          <div class="form-group">
+            <label for="exampleInputEmail1">作业标题</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="作业标题" name="title" readonly>
+          </div>
+          <div class="form-group">
+            <label>作业内容</label>
+            <textarea class="form-control" rows="3" name="content" readonly></textarea>
+          </div>
+          <div class="form-group">
+            <label>提交内容</label>
+            <textarea class="form-control" rows="3" name="answer"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="workSubmit()">确认</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+<script type="text/javascript" th:src="@{/js/jquery-3.6.0.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+
+<script type="text/javascript" th:src="@{/js/test.js}"></script>
+
+<script>
+  function tijiao(id, title, content) {
+    $('#form input[name="assignmentId"]').val(id);
+    $('#form input[name="title"]').val(title);
+    $('#form textarea[name="content"]').val(content);
+    $('#myModal').modal('show');
+  }
+</script>
+
+<script>
+  function workSubmit(){
+    // 提交作业
+    let data = $("#form").serialize();
+    $.post('/workSubmit',data).then(res=>{
+      if(res === 'success'){
+        alert('作业提交成功');
+        $('#myModal').modal('hide');
+      }else{
+        alert('作业提交失败');
+      }
+    });
+  }
+</script>
+
+</html>

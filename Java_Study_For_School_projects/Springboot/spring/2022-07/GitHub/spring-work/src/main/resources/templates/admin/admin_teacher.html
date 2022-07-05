@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>作业管理系统</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/select.css">
+</head>
+<body>
+<div class="bigbox">
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox">
+        <img src="/icon/menu.png" alt="功能按钮">
+    </label>
+    <ul>
+        <li><a href="#" class="w"><img src="/icon/user.png" alt="1"><span>管理员</span></a></li>
+        <li><a href="/AssignMent/teacher/admin"><img src="/icon/te.png" alt="2"><span>管理老师</span></a></li>
+        <li><a href="/AssignMent/student/admin"><img src="/icon/stu.png" alt="3"><span>管理学生</span></a></li>
+    </ul>
+</div>
+<div class="body">
+    <table class="table table-bordered">
+        <caption style="font-size: 25px;margin-left: 20px"> 老师管理 </caption>
+
+        <div class="text-center">
+            <!-- 按钮触发模态框 -->
+            <button class="btn btn-default" data-toggle="modal" data-target="#myModal" style="margin-right: 10px;float: right">
+                <span class="glyphicon glyphicon-user"></span> 添加
+            </button>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">添加教师</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form th:action="@{/AssignMent/teacher/save}" role="form" method="post">
+                                <div >
+                                    <label for="username1" style="margin: 0 20px 10px;">姓名：</label>
+                                    <input id="username1" type="text" name="name">
+                                </div>
+                                <div>
+                                    <label for="classes1" style="margin: 0 6px 10px">管理班级：</label>
+                                    <input id="classes1" type="text" name="classId">
+                                </div>
+                                <div>
+                                    <label for="post1" style="margin: 0 20px 10px">职称：</label>
+                                    <input id="post1" type="text" name="post">
+                                </div>
+                                <div>
+                                    <label for="hobby1" style="margin: 0 20px 10px">爱好：</label>
+                                    <input id="hobby1" type="text" name="hobby">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-default">提交</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+        </div>
+
+        <thead>
+        <tr>
+            <th class="text-center">工号</th>
+            <th class="text-center">姓名</th>
+            <th class="text-center">管理班级</th>
+            <th class="text-center">职称</th>
+            <th class="text-center">爱好</th>
+            <th class="text-center">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="t:${teachers}">
+            <td class="text-center" th:text="${t.id}"></td>
+            <td class="text-center" th:text="${t.name}"></td>
+            <td class="text-center" th:text="${t.classId}"></td>
+            <td class="text-center" th:text="${t.post}"></td>
+            <td class="text-center" th:text="${t.hobby}"></td>
+            <td class="text-center main">
+                <!-- 按钮触发模态框 -->
+                <button class="btn btn-default update" data-toggle="modal" data-target="#myModal1">
+                    <span class="glyphicon glyphicon-pencil"></span> 修改
+                </button>
+                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myModalLabel1">修改信息</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form th:action="@{/AssignMent/teacher/update}" method="post">
+                                    <div >
+                                        <label for="id" style="margin: 0 -145px 10px;padding-right: 170px">工号：</label>
+                                        <p id="id" class="from-control-static" style="display: inline-block" th:text="${t.id}"></p>
+                                        <input type="hidden" name="id" th:value="${t.id}">
+                                    </div>
+                                    <div >
+                                        <label for="username" style="margin: 0 20px 10px;">姓名：</label>
+                                        <input id="username" type="text" name="name" th:value="${t.name}">
+                                    </div>
+                                    <div>
+                                        <label for="classes" style="margin: 0 6px 10px">管理班级：</label>
+                                        <input id="classes" type="text" name="classId" th:value="${t.classId}">
+                                    </div>
+                                    <div>
+                                        <label for="post" style="margin: 0 20px 10px">职称：</label>
+                                        <input id="post" type="text" name="post" th:value="${t.post}">
+                                    </div>
+                                    <div>
+                                        <label for="hobby" style="margin: 0 20px 10px">爱好：</label>
+                                        <input id="hobby" type="text" name="hobby" th:value="${t.hobby}">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-default">提交更改</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+
+                <a class="btn btn-default btn-small" href="#" role="button" th:onclick="'deltea(\''+${t.id}+'\');'"><span class="glyphicon glyphicon-trash"></span> 删除</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <ul class="pager container">
+        <li th:class="${previous}? 'previous':'disabled'" style="margin-right: 150px"><a style="float: none;" th:href="@{/AssignMent/teacher/admin(pn=${now}-1)}">&larr;Prev</a></li>
+        <li th:class="${next}? 'next':'disabled'" style="margin-left: 150px"><a style="float: none;" th:href="@{/AssignMent/teacher/admin(pn=${now}+1)}">&rarr;Next</a></li>
+    </ul>
+
+</div>
+<script>
+    function deltea(id){
+        if (confirm("确定删除？")){
+            window.location.href="/AssignMent/teacher/deltea?id="+id;//get请求
+        }
+    }
+</script>
+</body>
+</html>

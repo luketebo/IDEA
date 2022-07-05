@@ -1,0 +1,217 @@
+<script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+<style>
+    #asCon .card * {
+        user-select: text;
+    }
+
+
+    #asCon .card a {
+        user-select: none;
+    }
+</style>
+
+<div id="asCon" class="container d-flex flex-column justify-content-start">
+    <h1 class="title">布置作业</h1>
+    <div class="fun my-5">
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#InfoModal"
+            data-bs-action="new">布置作业</button>
+    </div>
+    <div class="his" id="history"></div>
+</div>
+
+<div class="modal fade" id="InfoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text col-form-label">作业标题:</span>
+                        <input type="text" class="form-control" placeholder="标题" id="title_as"
+                            aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text col-form-label">内容:</span>
+                        <textarea rows="9" maxlength="512" class="form-control" aria-label="content of assignment"
+                            id="content_as"></textarea>
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text col-form-label">班级:</span>
+                        <select class="form-select" aria-label="Class select" id="classes">
+                            <option selected>选择班级</option>
+                            <!-- <option value="1">一班</option> -->
+                            <!-- <option value="2">二班</option> -->
+                            <!-- <option value="3">三班</option> -->
+                        </select>
+                    </div>
+                    <div class="input-group flex-nowrap mb-3">
+                        <span class="input-group-text col-form-label">结束时间:</span>
+                        <input type="datetime-local" class="form-control" placeholder="结束时间" id="deadLine"
+                            aria-describedby="addon-wrapping">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="upload">确认</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var total_pages = 0;
+    var current_page = 0;
+    list_as = [];
+    $(() => {
+        $.ajax({
+            url: ("http://" + window.location.host + "/InfoGet/getAs?pages=1&id=" + createId), success: (r) => {
+                if (prt) console.log(r["data"]["records"]);
+                let result = r["data"]["records"]
+                list_as = r["data"]["records"];
+                list_as = list_as.reverse();
+                for (let i in r["data"]["records"]) {
+                    $("#history").append(create(result[i]["id"], result[i]["title"], result[i]["content"], result[i]["classId"], formatDate(result[i]["createTime"]), formatDate(result[i]["deadLine"])))
+                };
+                (() => {
+                    $('[data-bs-toggle="popover"]').popover({ trigger: "focus" });
+
+                    for (let i in list_as)
+                        $("#" + list_as[i]["id"] + "d").click(function () {
+                            if (prt) console.log("删除操作" + list_as[i]["id"]);
+                            bootstrap.Popover.getInstance(document.getElementById(list_as[i]["id"] + "d")).show();
+                            var f = $(this);
+                            if (f.attr("confirming") == "waiting") {
+                                if (prt) console.log("delete");
+                                $.ajax({
+                                    url: "http://" + window.location.host + "/InfoDelete/deleteAs", type: "DELETE", success: () => {
+                                        createAs();
+                                    }, data: JSON.stringify({
+                                        "id": list_as[i]["id"],
+                                        "title": list_as[i]["title"]
+                                    }), dataType: "json",
+                                    contentType: "application/json"
+                                })
+                            } else {
+                                f.text("确认");
+                                f.attr("confirming", "waiting");
+                            }
+                        }).mouseout(function () {
+                            $(this).attr("confirming", "");
+                            $(this).text("删除");
+                            bootstrap.Popover.getInstance(document.getElementById(list_as[i]["id"] + "d")).hide();
+                        })
+                }
+                )(),
+                    (() => {
+                        $.ajax({
+                            url: "http://" + window.location.host + "/InfoGet/classes", type: "GET", success: (r) => {
+                                if (prt) console.log("班级：");
+                                if (prt) console.log(r);
+                                for (let i in r["data"]) {
+                                    if (r["data"][i]["teacherId"] == createId) {
+                                        $("#classes").append('<option value="' + r["data"][i]["classId"] + '">' + r["data"][i]["classId"] + '班</option>')
+                                    }
+                                }
+                            }
+                        })
+                    })()
+            }
+        });
+        (() => {
+            $("#upload").click(() => {
+                let action = $("#upload").attr("action");
+                let title = $("#title_as").val();
+                let content = $("#content_as").val();
+                let classes = $("#classes").val();
+                let deadLine = $("#deadLine").val();
+                var myModal = new bootstrap.Modal(document.getElementById("InfoModal"), {
+                    keyboard: false
+                })
+                if (action == "add")
+                    $.ajax({
+                        url: "http://" + window.location.host + "/InfoPost/createAs", type: "POST", data: JSON.stringify({
+                            "title": title,
+                            "content": content,
+                            "classId": parseInt(classes),
+                            "deadLine": deadLine,
+                            "createId": createId
+                        }), success: () => {
+                            myModal.hide();
+                            $("body").attr("style", "");
+                            $("div.modal-backdrop").remove();
+                            createAs();
+                        }, dataType: "json"
+                        , contentType: "application/json"
+                    })
+                else if (action == "edit")
+                    $.ajax({
+                        url: "http://" + window.location.host + "/InfoPut/updateAs", type: "PUT", data: JSON.stringify(
+                            {
+                                "title": title,
+                                "content": content,
+                                "classId": parseInt(classes),
+                                "deadLine": deadLine,
+                                "createId": createId
+                            }
+                        ), success: () => {
+                            myModal.hide();
+                            $("body").attr("style", "");
+                            $("div.modal-backdrop").remove();
+                            createAs();
+                        }, dataType: "json"
+                        , contentType: "application/json"
+                    })
+            })
+        })();
+    })
+
+    var infoModal = document.getElementById('InfoModal');
+    infoModal.addEventListener('show.bs.modal', function (event) {
+        // Button that triggered the modal
+        var button = event.relatedTarget;
+        // Extract info from data-bs-* attributes
+        var recipients = button.getAttribute('data-bs-action');
+        // Update the modal's content.
+        var modalTitle = infoModal.querySelector('.modal-title');
+        var modalBodyInputs = infoModal.querySelectorAll(".modal-body input");
+        var buttonUpload = infoModal.querySelector('#upload');
+        var pat = /(\w*)_(\d*)/;
+        let recipient = "";
+        if (pat.exec(recipients)) {
+            recipient = pat.exec(recipients)[1];
+        } else {
+            recipient = "new";
+        }
+        if (recipient == 'new') {
+            buttonUpload.setAttribute('action', 'add');
+            modalTitle.innerHTML = '布置作业';
+            for (var i = 0; i < modalBodyInputs.length; i++) {
+                modalBodyInputs[i].value = '';
+            }
+            modalBodyInputs[0].removeAttribute('readonly');
+        } else if (recipient == 'modify') {
+            var id = parseInt(pat.exec(recipients)[2]);
+            let target;
+            for (let i in list_as)
+                if (list_as[i]["id"] == id) {
+                    target = i;
+                    break;
+                }
+            $("#title_as").val(list_as[target]["title"]);
+            $("#content_as").val(list_as[target]["content"]);
+            $("#classes").val(list_as[target]["classId"]);
+            let pats = /(.*?)\+\d*/;
+            $("#deadLine").val(pats.exec(list_as[target]["deadLine"])[1]);
+
+            buttonUpload.setAttribute('action', 'edit');
+            modalTitle.innerHTML = '修改作业';
+            modalBodyInputs[0].setAttribute('readonly', 'readonly');
+        }
+    })
+
+</script>

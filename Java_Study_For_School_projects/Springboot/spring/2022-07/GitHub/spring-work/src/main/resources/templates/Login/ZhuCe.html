@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>教学实训管理系统—注册</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/login.js"></script>
+    <style>
+        body,td,th { font-family:  sans-serif; }
+        body { background-color: #ffffff; }
+    </style>
+    <script type="text/javascript">
+        function f1(){
+            //1-5个汉字
+            var regx = /^[\u4e00-\u9fa5a-zA-Z0-9]{1,5}$/;
+            var username = document.getElementById("username").value;
+            if(regx.test(username)){
+                document.getElementById("d1").style.color = "green";
+                document.getElementById("d1").innerHTML="√";
+                return true;
+            }else{
+                document.getElementById("d1").style.color = "red";
+                document.getElementById("d1").innerHTML="×";
+                return false;
+            }
+        }
+        function f2(){
+            //5-12个字母或汉字
+            var regx = /^[a-zA-Z0-9]{5,12}$/;
+            var password = document.getElementById("password").value;
+            if(regx.test(password)){
+                document.getElementById("d2").style.color = "green";
+                document.getElementById("d2").innerHTML="√";
+                return true;
+            }else{
+                document.getElementById("d2").style.color = "red";
+                document.getElementById("d2").innerHTML="×";
+                return false;
+            }
+        }
+        function subForm(){
+            return f1() && f2();
+
+        }
+    </script>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="container">
+        <!--注册-->
+        <form action="/end" method="get" onsubmit="return subForm()">
+            <h1>Register</h1>
+            <input id="username" type="text" placeholder="Username" name="username" onblur="f1()">
+            <input id="password" type="password" placeholder="Password" name="password" onblur="f2()">
+            <input id="identitycode" type="text" placeholder="Identity_code" name="authority">
+            <input type="submit" value="Sign In">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

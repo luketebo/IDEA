@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/bootstarp.css}" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" th:fragment="common_header">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img
+              th:src="@{/icon/paidaxing.svg}"
+              alt=""
+              width="40"
+              height="34"
+              class="d-inline-block align-text-top"
+              style="padding-right: 10px"
+      />Luke Tebo</a
+    >
+    <!-- 当是手机界面是 的缩放按钮 -->
+    <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Pricing</a>
+        <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+        >Disabled</a
+        >
+      </div>
+    </div>
+    <div class="dropdown" style="padding-right: 80px">
+      <a
+              class="dropdown-toggle nav-link"
+              href="#"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+      >
+        ><img th:src="@{/icon/paidaxing.svg}" alt="" width="30" height="24" />
+      </a>
+
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li>
+          <a class="dropdown-item" href="#"
+          ><img th:src="@{/icon/gear.svg}" style="padding-right: 8px" />设置</a
+          >
+        </li>
+        <li><a class="dropdown-item" href="#">测试</a></li>
+        <li>
+          <a class="dropdown-item" href="#"
+          ><img
+                  th:src="@{/icon/box-arrow-right.svg}"
+                  style="padding-right: 8px"
+          />退出</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</body>
+<script
+        type="text/javascript"
+        th:src="@{/js/bootstrap.js}"
+></script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+</head>
+<body>
+<div class="contain-fluid common_gaiNan" th:fragment="gaiNan">
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "http://localhost:8081/InfoGet/me",
+                type: "get",
+                async: true,
+                dataType: "json",
+                success: function (result) {
+                    console.log(result);
+                }
+
+            })
+            console.log("fuck")
+        })
+    </script>
+    <div class="row" >
+        <div class="col-md-4">
+            <p>照片：<img th:src="@{/img/photo_cxXszp.jpg}" style="width: 100px; height: 120px; border-radius: 5px; margin-top: 18px; margin-left: 50px"></p>
+        </div>
+        <div class="col-md-4" style="margin-top: 55px; padding-left: 10px;" >
+
+            <p>姓名：杨昌松</p>
+        </div>
+        <div class="col-md-4" style="margin-top: 55px;">
+            <p>班级：4班</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 55px;">
+            <p>身份： 老师</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 55px;">
+            <p>职务：讲师</p>
+        </div>
+        <div class="col-md-6" style="margin-top: 55px;">
+            <p>爱好： 玩 还有摆烂</p>
+        </div>
+    </div>
+</div>
+</body>
+<script
+        type="text/javascript"
+        th:src="@{/js/bootstrap.js}"
+></script>
+<script type="text/javascript" th:src="@{/js/jquery-3.6.0.js}"></script>
+</html>
